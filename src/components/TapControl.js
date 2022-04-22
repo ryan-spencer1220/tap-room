@@ -126,7 +126,7 @@ class TapControl extends React.Component {
         <div className="btn container">
           <div className="vertical-center">
             <button className="btn btn-secondary" onClick={this.handleClick}>
-              {buttonText}
+              <div className="row">{buttonText}</div>
             </button>
           </div>
         </div>

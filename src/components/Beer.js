@@ -16,6 +16,7 @@ function Beer(props) {
           <em>{props.breweryName}</em>
         </p>
         <hr />
+        <p>Click For Details!</p>
       </div>
       <button className="close">
         <FaTimes color="purple" onClick={() => onClickingDelete(props.id)} />
