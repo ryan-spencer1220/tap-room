@@ -37,7 +37,7 @@ header {
   color: #333;
   border-radius: 15px;
   padding: 40px 50px;
-  margin: 20px 0;
+  margin: 5%;
   position: relative;
 }
 
@@ -153,6 +153,7 @@ input:focus {
   width: 100px;
   height: 40px;
   cursor: pointer;
+  margin: 1%;
 }
 
 .btn-primary {
@@ -161,6 +162,9 @@ input:focus {
 
 .btn-secondary {
   background: #ff6a95;
+  margin: auto;
+  position: relative;
+  text-align: center;
 }
 
 .btn:hover {
@@ -185,16 +189,12 @@ input:focus {
   color: rebeccapurple;
 }
 
-/* FIX: Remove position: absolute to keep about icon at the bottom of the
- * document */
-.about-link {
+* document */ .about-link {
   display: flex;
   justify-content: flex-end;
 }
 
-/* FIX: Remove position: absolute to keep about icon at the bottom of the
- * document */
-.about-link a {
+* document */ .about-link a {
   color: #fff;
   cursor: pointer;
 }

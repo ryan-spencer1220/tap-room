@@ -4,6 +4,7 @@ import TapList from "./TapList";
 import BeerDetail from "./BeerDetail";
 import EditBeerForm from "./EditBeerForm";
 import PropTypes from "prop-types";
+import Button from "./shared/Button";
 
 class TapControl extends React.Component {
   constructor(props) {
@@ -106,8 +107,14 @@ class TapControl extends React.Component {
 
     return (
       <React.Fragment>
+        <div className="btn container">
+          <div className="vertical-center">
+            <button className="btn btn-secondary" onClick={this.handleClick}>
+              {buttonText}
+            </button>
+          </div>
+        </div>
         {currentlyVisibleState}
-        <button onClick={this.handleClick}>{buttonText}</button>
       </React.Fragment>
     );
   }

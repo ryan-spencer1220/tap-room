@@ -19,7 +19,7 @@ function EditBeerForm(props) {
   return (
     <React.Fragment>
       <ReusableForm
-        formSubmissionHandler={handleEditBeerFormSubmission} /* new code */
+        formSubmissionHandler={handleEditBeerFormSubmission}
         buttonText="Update Beer"
       />
     </React.Fragment>

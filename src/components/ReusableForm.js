@@ -1,18 +1,50 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Card from "./shared/Card";
+import Button from "./shared/Button";
 
 function ReusableForm(props) {
   return (
-    <React.Fragment>
+    <Card>
       <form onSubmit={props.formSubmissionHandler}>
-        <input type="text" name="beerName" placeholder="Mirror Pond" />
-        <input type="text" name="breweryName" placeholder="Deschutes Brewery" />
-        <input type="text" name="style" placeholder="Pale Ale" />
-        <input type="number" name="price" palceholder="6.50" />
-        <input type="number" name="alcohol" palceholder="5.5%" />
-        <button type="submit">{props.buttonText}</button>
+        <label>
+          Beer Name:
+          <input
+            type="text"
+            name="beerName"
+            placeholder="Mirror Pond"
+            className="input-group"
+          />
+        </label>
+        <label>
+          Brewery Name:
+          <input
+            type="text"
+            name="breweryName"
+            placeholder="Deschutes Brewery"
+            className="input-group"
+          />
+        </label>
+        <label>
+          Beer Style:
+          <input
+            type="text"
+            name="style"
+            placeholder="Pale Ale"
+            className="input-group"
+          />
+        </label>
+        <label>
+          Price($) / Pint:
+          <input type="number" name="price" className="input-group" />
+        </label>
+        <label>
+          ABV:
+          <input type="number" name="alcohol" className="input-group" />
+          <Button type="submit">{props.buttonText}</Button>
+        </label>
       </form>
-    </React.Fragment>
+    </Card>
   );
 }
 

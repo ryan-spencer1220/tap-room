@@ -1,11 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Card from "./shared/Card";
+import Button from "./shared/Button";
 
 function BeerDetail(props) {
   const { beer, onClickingDelete } = props;
 
   return (
-    <React.Fragment>
+    <Card>
       <h1>Beer Detail</h1>
       <h3>
         {beer.beerName} - {beer.breweryName}
@@ -13,10 +15,17 @@ function BeerDetail(props) {
       <p>
         <em>{beer.style}</em>
       </p>
-      <button onClick={props.onClickingEdit}>Update Beer</button>{" "}
-      <button onClick={() => onClickingDelete(beer.id)}>Delete Beer</button>{" "}
+      <button className="btn btn-primary" onClick={props.onClickingEdit}>
+        Update Beer
+      </button>{" "}
+      <button
+        className="btn btn-primary"
+        onClick={() => onClickingDelete(beer.id)}
+      >
+        Delete Beer
+      </button>{" "}
       <hr />
-    </React.Fragment>
+    </Card>
   );
 }
 

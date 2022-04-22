@@ -1,19 +1,20 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Card from "./shared/Card";
 
 function Beer(props) {
   return (
-    <React.Fragment>
+    <Card>
       <div onClick={() => props.whenBeerClicked(props.id)}>
         <h3>
-          {props.beerName} - {props.breweryName}
+          {props.beerName} - {props.style}
         </h3>
         <p>
-          <em>{props.style}</em>
+          <em>{props.breweryName}</em>
         </p>
         <hr />
       </div>
-    </React.Fragment>
+    </Card>
   );
 }
 
