@@ -1,11 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Card from "./shared/Card";
-import { FaTimes } from "react-icons/fa";
 
 function Beer(props) {
-  const { onClickingDelete } = props;
-
   return (
     <Card>
       <div onClick={() => props.whenBeerClicked(props.id)}>
@@ -18,9 +15,6 @@ function Beer(props) {
         <hr />
         <p>Click For Details!</p>
       </div>
-      <button className="close">
-        <FaTimes color="purple" onClick={() => onClickingDelete(props.id)} />
-      </button>
     </Card>
   );
 }

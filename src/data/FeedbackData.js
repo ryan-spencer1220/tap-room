@@ -1,15 +1,15 @@
 const FeedbackData = [
   {
     id: 1,
-    beerName: "Sticky Hands",
-    breweryName: "Block 15",
+    beerName: "Mirror Pond",
+    breweryName: "Deschutes",
     alcohol: 5,
     price: 6,
   },
   {
-    id: 1,
-    beerName: "Sticky Hands",
-    breweryName: "Block 15",
+    id: 2,
+    beerName: "Eliott",
+    breweryName: "Ex Novo",
     alcohol: 5,
     price: 6,
   },
