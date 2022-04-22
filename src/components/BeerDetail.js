@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import Card from "./shared/Card";
 
 function BeerDetail(props) {
-  const { beer, onClickingDelete } = props;
+  const { beer, onClickingDelete, onSubtractingPint } = props;
 
   return (
     <Card>
@@ -31,6 +31,12 @@ function BeerDetail(props) {
         onClick={() => onClickingDelete(beer.id)}
       >
         Delete Beer
+      </button>{" "}
+      <button
+        className="btn btn-primary"
+        onClick={() => onSubtractingPint(beer.id)}
+      >
+        Subtract Pint
       </button>{" "}
       <hr />
     </Card>

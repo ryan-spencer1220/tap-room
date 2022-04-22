@@ -16,6 +16,10 @@ class TapControl extends React.Component {
     };
   }
 
+  feedbackList({ feedback }) {
+    console.log(feedback);
+  }
+
   handleChangingSelectedBeer = (id) => {
     const selectedBeer = this.state.mainTapList.filter(
       (beer) => beer.id === id
@@ -68,12 +72,14 @@ class TapControl extends React.Component {
     });
   };
 
-  handlePintDecrease = (id) => {
-    const selectedBeer = this.state.mainTapList.filter(
-      (beer) => beer.id === id
-    )[0];
+  handlePintSubtract = (id) => {
+    const editedTapList = this.state.mainTapList.filter(
+      (beer) => (beer.volume -= 1)
+    );
     this.setState({
-      volume: volume - 16,
+      mainTapList: editedTapList,
+      editing: false,
+      selectedBeer: null,
     });
   };
 
@@ -95,6 +101,7 @@ class TapControl extends React.Component {
           beer={this.state.selectedBeer}
           onClickingDelete={this.handleDeletingBeer}
           onClickingEdit={this.handleEditClick}
+          onSubtractingPint={this.handlePintSubtract}
         />
       );
       buttonText = "Return to Taplist";
@@ -108,6 +115,7 @@ class TapControl extends React.Component {
         <TapList
           tapList={this.state.mainTapList}
           onBeerSelection={this.handleChangingSelectedBeer}
+          feedback={this.feedbackList}
         />
       );
       buttonText = "Add Beer";
@@ -116,7 +124,6 @@ class TapControl extends React.Component {
     return (
       <React.Fragment>
         {currentlyVisibleState}
-
         <div className="btn container">
           <div className="vertical-center">
             <button className="btn btn-secondary" onClick={this.handleClick}>
