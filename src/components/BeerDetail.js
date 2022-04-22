@@ -21,7 +21,10 @@ function BeerDetail(props) {
         <em>Price: ${beer.price}/pint</em>
       </p>
       <p>
-        <em>Reamaining Volume: {beer.volume} pints</em>
+        <em>
+          Reamaining Volume:{" "}
+          {beer.volume > 0 ? beer.volume + " pints" : "Out Of Stock"}
+        </em>
       </p>
       <button className="btn btn-primary" onClick={props.onClickingEdit}>
         Update Beer

@@ -72,14 +72,13 @@ class TapControl extends React.Component {
     });
   };
 
-  handlePintSubtract = (id) => {
+  handlePintSubtract = () => {
     const editedTapList = this.state.mainTapList.filter(
       (beer) => (beer.volume -= 1)
     );
     this.setState({
       mainTapList: editedTapList,
       editing: false,
-      selectedBeer: null,
     });
   };
 

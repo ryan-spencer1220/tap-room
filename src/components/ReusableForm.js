@@ -36,11 +36,23 @@ function ReusableForm(props) {
         </label>
         <label>
           Price($) / Pint:
-          <input type="number" name="price" className="input-group" />
+          <input
+            type="number"
+            name="price"
+            placeholder="5.00"
+            className="input-group"
+            min={0}
+          />
         </label>
         <label>
           ABV:
-          <input type="number" name="alcohol" className="input-group" />
+          <input
+            type="number"
+            name="alcohol"
+            placeholder="5%"
+            className="input-group"
+            min={0}
+          />
         </label>
 
         <Button type="submit">{props.buttonText}</Button>
