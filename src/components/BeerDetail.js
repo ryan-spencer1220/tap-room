@@ -1,19 +1,27 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Card from "./shared/Card";
-import Button from "./shared/Button";
 
 function BeerDetail(props) {
   const { beer, onClickingDelete } = props;
 
   return (
     <Card>
-      <h1>Beer Detail</h1>
+      <h1>Beer Details</h1>
       <h3>
         {beer.beerName} - {beer.breweryName}
       </h3>
       <p>
-        <em>{beer.style}</em>
+        <em>Style: {beer.style}</em>
+      </p>
+      <p>
+        <em>Alcohol: {beer.alcohol}%</em>
+      </p>
+      <p>
+        <em>Price: ${beer.price}/pint</em>
+      </p>
+      <p>
+        <em>Reamaining Volume: {beer.volume} pints</em>
       </p>
       <button className="btn btn-primary" onClick={props.onClickingEdit}>
         Update Beer

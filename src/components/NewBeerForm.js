@@ -12,6 +12,7 @@ function NewBeerForm(props) {
       style: event.target.style.value,
       price: event.target.price.value,
       alcohol: event.target.alcohol.value,
+      volume: 124,
       id: v4(),
     });
   }

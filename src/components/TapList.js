@@ -5,6 +5,11 @@ import PropTypes from "prop-types";
 function TapList(props) {
   return (
     <React.Fragment>
+      <header>
+        <div className="container">
+          <h2>Current Taplist</h2>
+        </div>
+      </header>
       <hr />
       {props.tapList.map((beer) => (
         <Beer
@@ -14,6 +19,7 @@ function TapList(props) {
           style={beer.style}
           price={beer.price}
           alcohol={beer.alcohol}
+          volume={beer.volume}
           id={beer.id}
           key={beer.id}
         />

@@ -41,8 +41,9 @@ function ReusableForm(props) {
         <label>
           ABV:
           <input type="number" name="alcohol" className="input-group" />
-          <Button type="submit">{props.buttonText}</Button>
         </label>
+
+        <Button type="submit">{props.buttonText}</Button>
       </form>
     </Card>
   );

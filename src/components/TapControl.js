@@ -4,7 +4,6 @@ import TapList from "./TapList";
 import BeerDetail from "./BeerDetail";
 import EditBeerForm from "./EditBeerForm";
 import PropTypes from "prop-types";
-import Button from "./shared/Button";
 
 class TapControl extends React.Component {
   constructor(props) {
@@ -69,6 +68,15 @@ class TapControl extends React.Component {
     });
   };
 
+  handlePintDecrease = (id) => {
+    const selectedBeer = this.state.mainTapList.filter(
+      (beer) => beer.id === id
+    )[0];
+    this.setState({
+      volume: volume - 16,
+    });
+  };
+
   render() {
     let currentlyVisibleState = null;
     let buttonText = null;
@@ -107,6 +115,8 @@ class TapControl extends React.Component {
 
     return (
       <React.Fragment>
+        {currentlyVisibleState}
+
         <div className="btn container">
           <div className="vertical-center">
             <button className="btn btn-secondary" onClick={this.handleClick}>
@@ -114,7 +124,6 @@ class TapControl extends React.Component {
             </button>
           </div>
         </div>
-        {currentlyVisibleState}
       </React.Fragment>
     );
   }
